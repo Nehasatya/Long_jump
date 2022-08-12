@@ -5,39 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Score_Entry">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="Athelete Registration"
-        ></TextView>
+        android:text="Score Entry"
+        android:textSize="50sp">
+
+    </TextView>
 
     <EditText
-        android:inputType="textPersonName"
-        android:layout_height="50dp"
         android:layout_width="350dp"
-        android:textSize="20sp"
-        android:hint="Name"
-
-        />
-    <EditText
+        android:layout_height="50dp"
+        android:hint="Score 1"
         android:inputType="number"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:hint="Chest No"
         ></EditText>
 
     <EditText
-        android:inputType="date"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:textSize="20sp"
-        android:hint="DOB"
-        ></EditText>
+        android:hint="Score 2"
+        android:inputType="number">
 
+    </EditText>
+
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Score 3"
+        android:inputType="number">
+
+    </EditText>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

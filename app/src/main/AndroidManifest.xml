@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Long_jump">
         <activity
+            android:name=".Records"
+            android:exported="true" />
+        <activity
+            android:name=".Score_Entry"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
