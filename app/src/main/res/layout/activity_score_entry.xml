@@ -16,6 +16,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/score1"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Score 1"
@@ -23,6 +24,7 @@
         ></EditText>
 
     <EditText
+        android:id="@+id/score2"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Score 2"
@@ -32,12 +34,23 @@
 
 
     <EditText
+        android:id="@+id/score3"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Score 3"
         android:inputType="number">
 
     </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enter"
+        android:textAlignment="center"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="150dp"
+        android:text="Show Records"> </Button>
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

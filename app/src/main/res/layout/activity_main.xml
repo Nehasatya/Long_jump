@@ -11,36 +11,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50sp"
-        android:text="Athelete Registration"
-        ></TextView>
+        android:text="Athelete Registration">
+    </TextView>
 
     <EditText
         android:id="@+id/name"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:layout_height="50dp"
         android:layout_width="350dp"
         android:textSize="20sp"
-        android:hint="Name"
+        android:hint="Name" />
 
-        />
     <EditText
         android:id="@+id/chest_no"
-        android:inputType="number"
+        android:inputType="text"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:textSize="20sp"
-        android:hint="Chest No"
-        ></EditText>
+        android:hint="Chest No">
+
+    </EditText>
 
     <EditText
         android:id="@+id/DOB"
-        android:inputType="date"
+        android:inputType="text"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:textSize="20sp"
-        android:hint="DOB"
-        ></EditText>
+        android:hint="DOB">
+
+    </EditText>
 
 
+    <Button
+        android:id="@+id/add_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="150dp"
+        android:text="Add Score">
+
+    </Button>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
