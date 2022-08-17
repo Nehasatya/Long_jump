@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     EditText DOB;
     String dob_var;
     Button add_score;
+    DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +30,22 @@ public class MainActivity extends AppCompatActivity {
         chest_no = (EditText)findViewById(R.id.chest_no);
         DOB = (EditText)findViewById(R.id.DOB);
         add_score=(Button)findViewById(R.id.add_score);
+        dbHandler = new DBHandler(MainActivity.this);
 
 
 
         add_score.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Athlete athlete1 = new Athlete(name.getText().toString(),chest_no.getText().toString(),DOB.getText().toString());
+                if(name.getText().toString().isEmpty() && chest_no.getText().toString().isEmpty() && DOB.getText().toString().isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Please Enter All Values", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-                Intent intent = new Intent(MainActivity.this,Score_Entry.class).putExtra("athlete1",athlete1);
-                startActivity(intent);
+                    dbHandler.addNewAthlete(name.getText().toString(),chest_no.getText().toString(),DOB.getText().toString());
+
+                    Intent intent = new Intent(MainActivity.this,Score_Entry.class);
+                    startActivity(intent);
             }
         });
 

@@ -16,12 +16,22 @@
     </TextView>
 
     <EditText
+        android:id="@+id/chest_no"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Ches No"
+        android:inputType="text">
+
+    </EditText>
+
+    <EditText
         android:id="@+id/score1"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Score 1"
-        android:inputType="number"
-        ></EditText>
+        android:inputType="number">
+
+    </EditText>
 
     <EditText
         android:id="@+id/score2"
