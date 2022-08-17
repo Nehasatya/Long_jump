@@ -28,8 +28,8 @@ public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + TABLE_NAME +" ("+NAME+"TEXT,"+CHEST_NO+"TEXT,"+
-                DOB+"TEXT,"+SCORE1+"NUMBER,"+SCORE2+"NUMBER,"+SCORE3+"NUMBER)";
+        String query = "CREATE TABLE " + TABLE_NAME +" ( "+NAME +" TEXT,"+CHEST_NO+" TEXT,"+
+                DOB+" TEXT,"+SCORE1+" NUMBER,"+SCORE2+" NUMBER,"+SCORE3+" NUMBER)";
 
         db.execSQL(query);
     }
@@ -61,9 +61,9 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(SCORE1,score1);
         values.put(SCORE2,score2);
         values.put(SCORE3,score3);
-        String query="select * from "+TABLE_NAME+" where chest_no = ?";
+        String query="select * from "+TABLE_NAME+" where CHEST_NO = ?";
 
-        Cursor cursor = db.rawQuery(query,new String[] {chest_no});
+        Cursor cursor = db.rawQuery("select * from Athlete  where chest_no= ?",new String[] {chest_no});
         if(cursor.getCount() > 0)
         {
             long result = db.update(TABLE_NAME,values,"name=?",new  String[]{chest_no});
