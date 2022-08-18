@@ -21,6 +21,9 @@ public class Records extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
 
+
+        lv=(ListView)findViewById(R.id.ListView);
+
         db = new DBHandler(this);
         Cursor res = db.getData();
         if(res.getCount()==0)
@@ -36,11 +39,12 @@ public class Records extends AppCompatActivity {
             buffer.append("DOB: "+res.getString(2)+"\n");
         }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(Records.this);
-        builder.setCancelable(true);
-        builder.setTitle("Athlete Details");
-        builder.setMessage(buffer.toString());
-        builder.show();
+
+
+        List<String> ath_list = new ArrayList<String>();
+        ArrayAdapter adapter = new ArrayAdapter(Records.this,android.R.layout.simple_list_item_1,ath_list);
+        ath_list.add(buffer.toString());
+        lv.setAdapter(adapter);
 
     }
 }

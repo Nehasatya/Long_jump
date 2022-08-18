@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Records">
 
-    <TextView
-        android:layout_width="399dp"
-        android:layout_height="83dp"
-        android:text="Records"
-        android:textSize="50sp">
-
-    </TextView>
 
     <ListView
         android:id="@+id/ListView"
