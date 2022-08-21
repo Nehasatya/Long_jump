@@ -38,7 +38,7 @@
         android:drawableStart="@drawable/ic_baseline_filter"
         android:drawablePadding="20dp"
         android:background="@drawable/round_corner"
-        android:inputType="number"
+        android:inputType="text"
         android:layout_margin="14dp" />
 
     <EditText
