@@ -5,53 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="Athelete Registration">
-    </TextView>
-
-    <EditText
+   <EditText
         android:id="@+id/name"
-        android:inputType="text"
-        android:layout_height="50dp"
         android:layout_width="350dp"
-        android:textSize="20sp"
-        android:hint="Name" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/mont_regular"
+        android:hint="Name"
+        android:textColorHint="#27282A"
+        android:elevation="8dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_person"
+        android:drawablePadding="20dp"
+        android:background="@drawable/round_corner"
+        android:inputType="text"
+        android:layout_margin="14dp"/>
 
     <EditText
         android:id="@+id/chest_no"
-        android:inputType="text"
         android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:hint="Chest No">
-
-    </EditText>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/mont_regular"
+        android:hint="Chest No"
+        android:textColorHint="#27282A"
+        android:elevation="8dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_filter"
+        android:drawablePadding="20dp"
+        android:background="@drawable/round_corner"
+        android:inputType="number"
+        android:layout_margin="14dp" />
 
     <EditText
         android:id="@+id/DOB"
-        android:inputType="text"
         android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:hint="DOB">
-
-    </EditText>
-
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/mont_regular"
+        android:hint="DOB"
+        android:textColorHint="#27282A"
+        android:elevation="8dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_calendar"
+        android:drawablePadding="20dp"
+        android:background="@drawable/round_corner"
+        android:inputType="text"
+        android:layout_margin="14dp" />
 
     <Button
         android:id="@+id/add_score"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginBottom="100dp"
-        android:layout_marginLeft="150dp"
-        android:text="Add Score">
+        android:fontFamily="@font/mont_bold"
+        android:hint="ADD SCORE"
+        android:textColorHint="#FEFEFE"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_round"/>
 
-    </Button>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
