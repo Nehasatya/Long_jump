@@ -4,63 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#E5E5E5"
     tools:context=".Score_Entry">
 
-    <TextView
+    <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Score Entry"
-        android:textSize="50sp">
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle">
 
-    </TextView>
+        <TableRow
+            android:background="#3303F5C3"
+            android:padding="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
 
-    <EditText
-        android:id="@+id/chest_no"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:hint="Ches No"
-        android:inputType="text">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fontFamily="@font/mont_bold"
+                android:layout_weight="1"
+                android:text="Chest No."
+                android:textColor="#FEFEFE"
+                android:gravity="center"/>
 
-    </EditText>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fontFamily="@font/mont_bold"
+                android:layout_weight="1"
+                android:text="Score 1"
+                android:textColor="#FEFEFE"
+                android:gravity="center"/>
 
-    <EditText
-        android:id="@+id/score1"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:hint="Score 1"
-        android:inputType="number">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fontFamily="@font/mont_bold"
+                android:layout_weight="1"
+                android:text="Score 2"
+                android:textColor="#FEFEFE"
+                android:gravity="center" />
 
-    </EditText>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/mont_bold"
+                android:text="Score 3"
+                android:textColor="#FEFEFE"
+                android:gravity="center" />
+        </TableRow>
 
-    <EditText
-        android:id="@+id/score2"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:hint="Score 2"
-        android:inputType="number">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#fefefe"
+            android:padding="4dp"
+            android:weightSum="4">
 
-    </EditText>
+            <EditText
+                android:id="@+id/chest_no"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/score1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
 
 
-    <EditText
-        android:id="@+id/score3"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:hint="Score 3"
-        android:inputType="number">
+            <EditText
+                android:id="@+id/score2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
 
-    </EditText>
+            <EditText
+                android:id="@+id/score3"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+        </TableRow>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/enter"
-        android:textAlignment="center"
-        android:layout_marginBottom="100dp"
-        android:layout_marginLeft="150dp"
-        android:text="Show Records">
-    </Button>
+        <Button
+            android:id="@+id/enter"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mont_bold"
+            android:hint="SHOW"
+            android:layout_marginRight="150dp"
+            android:layout_marginLeft="150dp"
+            android:textColorHint="#FEFEFE"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_round"/>
+
+    </TableLayout>
+
 
 
 
