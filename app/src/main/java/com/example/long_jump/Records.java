@@ -40,7 +40,6 @@ public class Records extends AppCompatActivity {
         }
 
 
-
         List<String> ath_list = new ArrayList<String>();
         ArrayAdapter adapter = new ArrayAdapter(Records.this,android.R.layout.simple_list_item_1,ath_list);
         ath_list.add(buffer.toString());
